@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: "anilak1-1b66"
+    labels:
+        app: "anilak1-1b66"
+spec:
+    type: LoadBalancer
+    ports:
+    - port: 220
+      targetPort: 220
+      protocol: TCP
+      name: http
+    selector:
+        app: "anilak1-1b66"
